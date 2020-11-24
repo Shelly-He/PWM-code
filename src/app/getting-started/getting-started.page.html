@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Introduction</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color = "medium"> 
+    <ion-card color = "dark"> 
+      <ion-card-header>
+          <ion-card-title><b><h1>How do I get started?</h1></b></ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-text>
+            <span [innerHTML]="gettingStarted"></span>
+        </ion-text>
+
+	<ion-row>
+      <ion-col>
+      <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="prevPage()">
+        Prev Page
+      </ion-button>
+      </ion-col>
+      <ion-col>
+      <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="nextPage()">
+        Party Overview
+      </ion-button>
+      </ion-col>
+    </ion-row>
+
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>

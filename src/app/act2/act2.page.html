@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Act 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!--ion-content color="medium">
+
+  Card format
+
+  <ion-card color="dark">
+    <ion-card-header>
+        <ion-title>
+            <h1>Act 2 Description</h1>
+        </ion-title>
+    </ion-card-header>
+
+    <ion-title>{{act2}} Module WIP</ion-title>
+    <br>
+
+  </ion-card>
+</ion-content-->
+
+<ion-content color="medium" *ngIf="unlocked2 == true">
+
+<ion-card color="dark">
+      <ion-card-header>
+          <ion-card-title><b>{{name}}</b></ion-card-title>
+          <ion-card-subtitle>{{title}}</ion-card-subtitle>
+      </ion-card-header>
+ </ion-card> 
+
+ <ion-card color="dark">
+      <ion-card-header>
+          <ion-card-title><b>Francis Fisk is dead!</b></ion-card-title>
+      </ion-card-header>
+
+       <ion-card-content>
+        <ion-text [innerHTML]="act2Info"> 
+            <!--<span [innerHTML]="ch.hostDescription"></span>-->
+        </ion-text>
+      </ion-card-content>
+ </ion-card> 
+
+  <ion-card color="dark" *ngIf="act2Obj != null">
+      <ion-card-header>
+          <ion-card-title><b>Special Knowledge and Instructions for Act 2</b></ion-card-title>
+      </ion-card-header>
+
+       <ion-card-content>
+        <ion-text [innerHTML]="act2Obj">
+            <!--<span [innerHTML]="ch.hostDescription"></span>-->
+        </ion-text>
+      </ion-card-content>
+ </ion-card>  
+
+
+</ion-content>
+
+<ion-content color="medium" *ngIf="unlocked2 == false">
+
+<ion-card color="dark">
+      <ion-card-header>
+          <ion-card-title><b>Act 2 has not been unlocked yet. Please wait for the host to unlock it</b></ion-card-title>
+      </ion-card-header>
+ </ion-card> 
+
+</ion-content>
+
+

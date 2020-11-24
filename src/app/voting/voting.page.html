@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+       <!--<ion-back-button  defaultHref="guest-list"></ion-back-button>-->
+       <ion-menu-button ></ion-menu-button>
+     </ion-buttons>
+    <ion-title>Voting</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+  <form (ngSubmit)="submitVote()">
+    <ion-card color="dark">
+      <ion-card-header class="charLabel">Vote!</ion-card-header>
+      <ion-item color="dark">
+        <ion-label>Your Character?</ion-label>
+        <ion-select name="name" color="dark" [(ngModel)]="vote.name">
+          <ion-select-option *ngFor="let character of characters">{{character}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item color="dark" *ngFor="let question of questions; let i = index; trackBy:trackByIdx" [attr.data-index]="i">
+        <ion-label>{{question}}</ion-label>
+        <ion-select name="votes" [(ngModel)]="votes[i]">
+          <ion-select-option *ngFor="let character of characters">{{character}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item color="dark">
+        <ion-button type="submit" expand="block" size="small" color="tertiary" fill="solid">Submit Vote</ion-button>
+      </ion-item>
+    </ion-card>
+  </form>
+  <form (ngSubmit)="tallyVotes()">
+    <ion-card color="dark">
+      <ion-card-header class="charLabel">Ready to Collect the Votes?</ion-card-header>
+      <ion-item color="dark">
+        <ion-button type="submit" expand="block" size="small" color="tertiary" fill="solid">Tally Votes</ion-button>
+      </ion-item>
+    </ion-card>
+  </form>
+</ion-content>
+
+<!--ion-content color="medium" *ngIf="unlocked == false">
+
+  <ion-card color="dark">
+        <ion-card-header>
+            <ion-card-title><b>Act 2 has not been unlocked yet. Please wait for the host to unlock it</b></ion-card-title>
+        </ion-card-header>
+   </ion-card>
+
+</ion-content-->

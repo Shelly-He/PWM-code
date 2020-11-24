@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Preparations</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color = "medium"> 
+    
+  <ion-card color = "dark"> 
+   
+      <ion-card-header>
+          <ion-card-title>Props</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-text>
+            <span [innerHTML]="props"></span>
+        </ion-text>
+      </ion-card-content>
+    </ion-card>
+
+     <ion-card color="dark">
+      <ion-card-header>
+          <ion-card-title>Menu</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-text>
+            <span [innerHTML]="menu"></span>
+        </ion-text>
+      </ion-card-content>
+    </ion-card>
+
+     <ion-card color="dark">
+      <ion-card-header>
+          <ion-card-title>Setting the Scene</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-text>
+            <span [innerHTML]="scene"></span>
+        </ion-text>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="dark">
+      <ion-card-header>
+          <ion-card-title>Audio</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-text>
+            <span [innerHTML]="audio"></span>
+        </ion-text>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="dark">
+      <ion-card-header>
+          <ion-card-title>Candles</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-text>
+            <span [innerHTML]="candles"></span>
+        </ion-text>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="dark">
+      <ion-card-header>
+          <ion-card-title>Preparing the Paperwork</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-text>
+            <span [innerHTML]="paperwork"></span>
+        </ion-text>
+      </ion-card-content>
+    </ion-card>
+
+      <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="nextPage()">
+        Party Information
+  </ion-button>
+
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+       <!--<ion-back-button  defaultHref="guest-list"></ion-back-button>-->
+       <ion-back-button ></ion-back-button>
+     </ion-buttons>
+    <ion-title>Add/Remove Guests</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color = "dark">
+  <ion-card color = "dark">
+    <ion-card-header>
+        <ion-card-title ><h1>Add an non-device guest.</h1></ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item color="dark">
+        <ion-input [(ngModel)]="guestNameAdd" placeholder="Guest's Name"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="addGuest()">
+        Add Guest
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color = "dark">
+    <ion-card-header>
+        <ion-card-title ><h1>Nicely remove a guest.</h1></ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item color="dark">
+        <ion-input [(ngModel)]="guestNameRem" placeholder="Guest's Name"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="removeGuest()">
+        Remove Guest
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

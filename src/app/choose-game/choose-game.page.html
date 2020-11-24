@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Choose a Game</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color= "medium">
+
+    <ion-grid>
+        <ion-row>
+          <ion-col size="3">
+            <ion-item color="medium"> 
+              <div></div>
+              <img src = "assets\icon\curly-mask.png" alt = "curly">
+            </ion-item>
+          </ion-col>
+
+          <ion-col size="6">
+              <ion-card color = "dark">
+                  <ion-card-header>
+                      <ion-card-title><h1>Choose an existing game</h1></ion-card-title>
+                  </ion-card-header>
+          
+					  <ion-card-content>
+					   <ion-button  expand="block" size="small" color="tertiary" fill="solid" (click)="chooseGame(i)" *ngFor="let game of existingList; let i = index">
+						{{game}}
+					  </ion-button>
+  
+                  </ion-card-content>
+              </ion-card>
+            </ion-col>
+
+            <ion-col size="3">
+              <ion-item color="medium">
+                  <img src = "assets\icon\domino-mask.png" alt = "domino">
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size="3">
+              <ion-item color="medium">
+                  
+                  <img src = "assets\icon\minion.png" alt = "minion">
+              </ion-item>
+            </ion-col>
+        
+            <ion-col size="6">
+              <ion-card color = "dark">
+                <ion-card-content>
+          
+                  <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="addOrCreateGame()">
+                    Add or Create Game
+                  </ion-button>
+          
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+        
+              <ion-col size="3">
+                <ion-item color="medium">
+                  <img src = "assets\icon\blade.png" alt = "blade">
+                </ion-item>
+              </ion-col>
+          </ion-row>
+        </ion-grid>
+
+
+
+
+
+</ion-content>

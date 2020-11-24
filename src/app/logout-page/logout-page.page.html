@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+       <!--<ion-back-button  defaultHref="guest-list"></ion-back-button>-->
+       <ion-menu-button ></ion-menu-button>
+     </ion-buttons>
+    <ion-title>Account Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color = "medium">
+<ion-card color = "dark">
+   <ion-card-header >
+          <ion-card-title color="danger">
+          Update Account Information
+      </ion-card-title>
+   </ion-card-header>
+   <ion-card-content color="dark">
+  <ion-item color = "dark">
+    <ion-label position="stacked">Name</ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item color = "dark">
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  </ion-card-content>
+</ion-card>
+  <ion-button (click)="update()" color="danger" expand="block" size="small">
+    Update
+  </ion-button>
+
+    <ion-card color = "dark">
+  <ion-card-header>
+      <ion-title>Would you like to switch games?</ion-title>
+  </ion-card-header>
+  </ion-card>
+
+  <ion-button (click)="switchGames()" color="danger" expand="block" size="small">
+    Switch games
+  </ion-button>
+
+  <ion-card color = "dark">
+  <ion-card-header>
+      <ion-title>Would you like to log out?</ion-title>
+  </ion-card-header>
+  </ion-card>
+
+  <ion-button (click)="logout()" color="danger" expand="block" size="small">
+    Logout
+  </ion-button>
+
+
+</ion-content>

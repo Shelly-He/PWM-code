@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Introduction</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color = "medium"> 
+   <ion-card color = "dark"> 
+      <ion-card-header>
+          <ion-card-title color="danger"><h1>Welcome!</h1></ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-text>
+            <span [innerHTML]="welcome"></span>
+        </ion-text>
+
+      <br>
+      <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="nextPage()">
+        Next Page
+      </ion-button>
+
+      
+
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>

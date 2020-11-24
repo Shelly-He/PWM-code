@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>
+      Playing With Murder
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content color="medium">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2">
+        <ion-item color="medium"> 
+          <img src = "assets\icon\holmes.png" alt = "holmes">
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="8">
+        <ion-card color = "dark">
+          <ion-card-header>
+            <ion-card-title><h1>Sign in with an existing account</h1></ion-card-title>
+          </ion-card-header>
+                
+          <ion-card-content>
+            <ion-item color = "dark">
+              <ion-label position="stacked"><h1>Name</h1></ion-label>
+              <ion-input [(ngModel)]="username"></ion-input>
+            </ion-item>
+            <ion-item color = "dark">
+                <ion-label position="stacked"><h1>Password</h1></ion-label>
+              <ion-input [(ngModel)]="password" type="password"></ion-input>
+            </ion-item>
+            <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="login()">
+                Sign-in
+            </ion-button>
+            <!--br>
+            Test email is 'guest@guest.com'.
+            <br>
+            Test password is 'password'.-->
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="2">
+        <ion-item color="medium">
+          <img src = "assets\icon\assassin-brown.png" alt = "assassin">
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col size="2">
+          <ion-item color="medium">
+            <img src = "assets\icon\mask.png" alt = "mask">
+          </ion-item>
+        </ion-col>
+  
+        <ion-col size="8">
+          <ion-card color = "dark">
+              <ion-card-header>
+                <ion-card-title><h1>Create a new account</h1></ion-card-title>
+              </ion-card-header>
+              
+              <ion-card-content>
+                <ion-item color = "dark">
+                  <ion-label position="stacked"><h1>Name</h1></ion-label>
+                  <ion-input [(ngModel)]="name"></ion-input>
+                </ion-item>
+              <ion-item color = "dark">
+                <ion-label position="stacked"><h1>Email</h1></ion-label>
+                <ion-input [(ngModel)]="newEmail"></ion-input>
+              </ion-item>
+              <ion-item color = "dark">
+                <ion-label position="stacked"><h1>Password</h1></ion-label>
+                <ion-input [(ngModel)]="newPassword" type="password"></ion-input>
+              </ion-item>
+              <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="createAccount()">
+                  Create Account
+              </ion-button>
+              </ion-card-content>
+            </ion-card>
+        </ion-col>
+  
+        <ion-col size="2">
+          <ion-item color="medium">
+            <img src = "assets\icon\spy.png" alt = "spy">
+          </ion-item>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+

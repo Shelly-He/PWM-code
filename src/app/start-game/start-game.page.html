@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Instructions
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="dark">
+  <ion-item color="dark" *ngFor="let section of sections; let i = index" [attr.data-index]="i" (click)="goChapterList(i)">
+      <ion-label color="light">
+        {{section.title}}
+    </ion-label>
+    
+  </ion-item>
+
+  <!--<ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="next()">
+    Next Page
+  </ion-button>-->
+</ion-content>

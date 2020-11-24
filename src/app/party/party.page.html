@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Party Information
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color = "medium">
+
+<ion-card color = "dark">
+      <ion-card-header>
+          <ion-card-title color="danger">
+          {{name}}
+      </ion-card-title>
+      </ion-card-header>
+
+    <ion-card-content color = "dark">
+      <ion-item color = "dark" >
+        <ion-text color = "light">Description: {{ description }}</ion-text>
+      </ion-item>
+      <ion-item color = "dark">
+        <ion-text color = "light">Location: {{locationName}} {{ locationAddress }}</ion-text>
+      </ion-item>
+      <ion-item color = "dark">
+        <ion-text color = "light">Date: {{date}}</ion-text>
+      </ion-item>
+      <ion-item color = "dark">
+        <ion-text color = "light">Time: {{time}}</ion-text>
+      </ion-item>
+
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="dark">
+      <ion-card-header >
+          <ion-card-title color="danger">
+          Decor and Props
+      </ion-card-title>
+      </ion-card-header>
+
+    <ion-card-content color = "dark">
+      		<ion-item  *ngFor="let d of decor" color="dark">
+        		<ion-text > {{ d }}</ion-text>
+      		</ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="dark">
+      <ion-card-header >
+          <ion-card-title color="danger">
+          Menu
+      </ion-card-title>
+      </ion-card-header>
+
+    <ion-card-content color="dark">
+      		<ion-item *ngFor="let m of menu" color="dark">
+        		<ion-text > {{ m }}</ion-text>
+      		</ion-item>
+      </ion-card-content>
+    </ion-card>
+
+      <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="edit()">
+        Edit
+      </ion-button>
+
+</ion-content>

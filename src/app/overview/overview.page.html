@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Overview</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color = "medium"> 
+    <ion-card color = "dark">
+      <ion-card-header>
+          <ion-card-title color="danger"><h1>An overview of the party</h1></ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-text>
+            <span [innerHTML]="overview"></span>
+        </ion-text>
+      
+        <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="nextPage()">
+        Character List
+      </ion-button>
+
+
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>

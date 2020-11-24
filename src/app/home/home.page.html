@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color = "medium"> 
+  <ion-card color = "dark"> 
+      <ion-card-header>
+          <ion-card-subtitle>Welcome to:</ion-card-subtitle>
+          <ion-card-title color="danger" fontSize="256"><h1>MURDER IN MANHATTAN!</h1></ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-text font-weight="bold">
+          <span [innerHTML]="homeMaterial"></span>
+        </ion-text>
+
+      </ion-card-content>
+    
+    
+  </ion-card>
+
+      <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="doSomething()">
+          Get Started
+      </ion-button>
+
+
+        <!--div fontSize="96">
+        4/22 change
+        List of emails on server
+        </div>
+        <div *ngFor="let item of items | async">
+
+          <h2>{{item.email | json}}</h2>
+        </div-->
+    
+
+    <!--<ion-item>
+      <span [innerHTML]="homeMaterial"></span>
+    </ion-item>-->
+</ion-content>

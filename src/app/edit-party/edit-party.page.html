@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Edit Party Information</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color = "medium">
+<ion-card color = "dark">
+   <ion-card-header >
+          <ion-card-title color="danger">
+          Party Details
+      </ion-card-title>
+   </ion-card-header>
+   <ion-card-content color="dark">
+  <ion-item color = "dark">
+    <ion-label position="stacked">Event Name</ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item color = "dark">
+    <ion-label position="stacked">Event Description</ion-label>
+    <ion-input [(ngModel)]="description"></ion-input>
+  </ion-item>
+
+  <ion-row>
+    <ion-col>
+  		<ion-item color = "dark">
+    		<ion-label position="stacked">Location Name</ion-label>
+    		<ion-input [(ngModel)]="locationName"></ion-input>
+  		</ion-item>
+    </ion-col>
+    <ion-col>
+  		<ion-item color = "dark">
+    		<ion-label position="stacked">Location Address</ion-label>
+    	<ion-input [(ngModel)]="locationAddress"></ion-input>
+  		</ion-item>
+    </ion-col>
+  </ion-row>
+
+    <ion-row>
+    <ion-col>
+  		<ion-item color = "dark">
+    		<ion-label position="stacked">Date</ion-label>
+    		<ion-input [(ngModel)]="date"></ion-input>
+  		</ion-item>
+    </ion-col>
+    <ion-col>
+  		<ion-item color = "dark">
+    		<ion-label position="stacked">Start Time</ion-label>
+    	<ion-input [(ngModel)]="time"></ion-input>
+  		</ion-item>
+    </ion-col>
+  </ion-row>
+  </ion-card-content>
+</ion-card>
+
+    <ion-card color="dark">
+      <ion-card-header >
+          <ion-card-title color="danger">
+          Props and Decor
+      </ion-card-title>
+      </ion-card-header>
+
+    <ion-card-content color="dark">
+      		<ion-item color="dark" *ngFor="let d of decor">
+        		<ion-text > {{ d }}</ion-text>
+      		</ion-item>
+    	<ion-item color="dark">
+    		<ion-label position="stacked">Add a new item</ion-label>
+    		<ion-input [(ngModel)]="newDecor"></ion-input>
+  		</ion-item>
+      </ion-card-content>
+    </ion-card>
+
+
+    <ion-card color="dark">
+      <ion-card-header >
+          <ion-card-title color="danger">
+          Menu
+      </ion-card-title>
+      </ion-card-header>
+
+    <ion-card-content color="dark">
+      		<ion-item color="dark" *ngFor="let m of menu">
+        		<ion-text > {{ m }}</ion-text>
+      		</ion-item>
+    	<ion-item color="dark">
+    		<ion-label position="stacked">Add a new item</ion-label>
+    		<ion-input [(ngModel)]="newMenu"></ion-input>
+  		</ion-item>
+      </ion-card-content>
+    </ion-card>
+
+   <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="done()">
+      Save
+   </ion-button>
+
+
+</ion-content>

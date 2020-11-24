@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+  <ion-card color="dark" *ngFor="let page of pages; let i = index" [attr.data-index]="i">
+    <ion-card-header>
+      <b [innerHTML]="page.title"></b>
+    </ion-card-header>
+    <ion-card-content ng-bind-html="page.HTML" [innerHTML]="page.HTML">
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+       <!--<ion-back-button  defaultHref="guest-list"></ion-back-button>-->
+       <ion-back-button ></ion-back-button>
+     </ion-buttons>
+    <ion-title>Create or add Game</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color = "medium">
+
+  <ion-card color = "dark">
+    <ion-card-header>
+        <ion-card-title ><h1>Add an existing game</h1></ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-input [(ngModel)]="gameNameAdd" placeholder="Game's ID"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="addGame()">
+        Add Existing Game
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color = "dark">
+  <ion-card-header>
+    <ion-card-title ><h1>Create a new game</h1></ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>
+      <ion-input [(ngModel)]="gameName" placeholder="Game's Name"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="createGame()">
+      Create Game
+    </ion-button>
+
+  </ion-card-content>
+  </ion-card>
+
+</ion-content>

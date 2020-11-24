@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Results!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+  <ion-card *ngFor="let question of questions; let i = index" [attr.data-index]="i" color="dark">
+    <ion-card-header>{{question}}</ion-card-header>
+    <ion-card-content color="dark" *ngFor="let winner of results[i]" color="dark">
+      <ion-item color="dark">
+        {{winner}}
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

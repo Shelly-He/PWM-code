@@ -1,0 +1,11 @@
+<ion-view title="Voting" id="page6">
+  <ion-content padding="true" class="manual-remove-top-padding has-header">
+    <ion-list id="voting-list8" class="manual-list-fullwidth">
+      <ion-item class="item-avatar" id="voting-list-item9" ui-sref="menu.timeToVote()" ng-repeat="item in items">
+        <img src="{{item.img}}">
+        <h2>{{item.title}}</h2>
+        <p>{{item.vote}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

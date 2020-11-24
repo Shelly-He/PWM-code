@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+       <!--<ion-back-button  defaultHref="guest-list"></ion-back-button>-->
+       <ion-menu-button ></ion-menu-button>
+     </ion-buttons>
+    <ion-title>Game Play</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content color="medium">
+
+ <ion-card color="dark" >
+      <ion-card-header>
+          <ion-card-title><b>Start the Game</b></ion-card-title>
+          <ion-card-subtitle>By clicking the button below, Act 1 will be unlocked</ion-card-subtitle>
+      </ion-card-header>
+
+       <ion-card-content>
+       <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="unlock1()">
+          Unlock Act 1
+      </ion-button>
+      </ion-card-content>
+ </ion-card>
+
+  <ion-card color="dark" >
+      <ion-card-header>
+          <ion-card-title><b>Start Act 2</b></ion-card-title>
+          <ion-card-subtitle>By clicking the button below, Act 2 will be unlocked</ion-card-subtitle>
+      </ion-card-header>
+
+       <ion-card-content>
+       <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="unlock2()">
+          Unlock Act 2
+      </ion-button>
+      </ion-card-content>
+ </ion-card>
+
+   <ion-card color="dark" >
+      <ion-card-header>
+          <ion-card-title><b>Unlock Clues</b></ion-card-title>
+          <ion-card-subtitle>Click the corresponding buttons below to unlock each clue</ion-card-subtitle>
+      </ion-card-header>
+
+       <ion-card-content>
+        <ion-button *ngFor="let cl of allClues" expand="block" size="small" lines="none" color="tertiary" fill="solid" (click)="unlockClue(cl)">
+      {{cl}}
+      </ion-button>
+
+      </ion-card-content>
+ </ion-card>
+
+   <ion-card color="dark" >
+      <ion-card-header>
+          <ion-card-title><b>Start Voting</b></ion-card-title>
+          <ion-card-subtitle>By clicking the button below, the voting function will be unlocked</ion-card-subtitle>
+      </ion-card-header>
+
+       <ion-card-content>
+       <ion-button expand="block" size="small" color="tertiary" fill="solid" (click)="unlockV()">
+          Unlock Voting
+      </ion-button>
+      </ion-card-content>
+ </ion-card>
+
+</ion-content>
